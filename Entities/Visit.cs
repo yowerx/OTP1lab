@@ -7,8 +7,9 @@
         public int MembershipId { get; private set; }
         public int ClassId { get; private set; }
         public int ClientId { get; private set; }
+        public int TrainerId { get; private set; }
 
-        public static Visit CreateOperation(int id, DateTime visitDate, int membershipId, int classId, int clientId)
+        public static Visit CreateOperation(int id, DateTime visitDate, int membershipId, int classId, int clientId, int trainerId)
         {
             return new Visit
             {
@@ -16,7 +17,8 @@
                 VisitDate = visitDate,
                 MembershipId = membershipId,
                 ClassId = classId,
-                ClientId = clientId
+                ClientId = clientId,
+                TrainerId = trainerId
             };
         }
     }
